@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Explorer | Book Your Dream Vacation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f8fb;
+color:#333;
+}
+
+header{
+position:fixed;
+width:100%;
+top:0;
+left:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:rgba(0,0,0,.45);
+backdrop-filter:blur(8px);
+z-index:999;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#fff;
+}
+
+.logo span{
+color:#FFD54F;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+margin-left:28px;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#FFD54F;
+}
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:65px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:35px;
+}
+
+.btn{
+background:#ff9800;
+padding:15px 35px;
+border-radius:50px;
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+background:#ff5722;
+}
+
+.booking{
+background:white;
+width:90%;
+max-width:1100px;
+margin:-60px auto 60px;
+padding:35px;
+border-radius:18px;
+box-shadow:0 12px 30px rgba(0,0,0,.15);
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+}
+
+.booking input,
+.booking select{
+padding:15px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:15px;
+}
+
+.booking button{
+background:#ff9800;
+border:none;
+color:white;
+font-size:17px;
+border-radius:8px;
+cursor:pointer;
+}
+
+section{
+padding:80px 8%;
+}
+
+.section-title{
+text-align:center;
+font-size:42px;
+margin-bottom:50px;
+color:#0D47A1;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card img{
+width:100%;
+height:230px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.price{
+color:#ff5722;
+font-size:22px;
+font-weight:bold;
+margin-top:15px;
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
+}
+
+.feature{
+background:white;
+padding:30px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.feature h3{
+margin:20px 0;
+color:#0D47A1;
+}
+
+.review{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+footer{
+background:#0D47A1;
+color:white;
+padding:40px;
+text-align:center;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+nav a{
+margin:8px;
+display:inline-block;
+}
+
+.booking{
+margin-top:-40px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">Travel<span>Explorer</span></div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Destinations</a>
+<a href="#">Packages</a>
+<a href="#">Gallery</a>
+<a href="#">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Discover Your Next Adventure</h1>
+
+<p>Explore beautiful destinations around the world with the best travel deals.</p>
+
+<a href="#" class="btn">Book Your Trip</a>
+
+</div>
+
+</section>
+
+<div class="booking">
+
+<input type="text" placeholder="Destination">
+
+<input type="date">
+
+<input type="date">
+
+<select>
+<option>Guests</option>
+<option>1 Adult</option>
+<option>2 Adults</option>
+<option>Family</option>
+</select>
+
+<button>Search</button>
+
+</div>
+
+<section>
+
+<h2 class="section-title">Popular Destinations</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&fit=crop&w=900&q=80">
+<div class="card-content">
+<h3>Maldives</h3>
+<p>Crystal clear water, luxury resorts and unforgettable sunsets.</p>
+<div class="price">From ₹39,999</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=80">
+<div class="card-content">
+<h3>Paris</h3>
+<p>Experience romance, iconic landmarks and world-class cuisine.</p>
+<div class="price">From ₹69,999</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=900&q=80">
+<div class="card-content">
+<h3>Dubai</h3>
+<p>Luxury shopping, skyscrapers and exciting desert adventures.</p>
+<div class="price">From ₹34,999</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Why Travel With Us?</h2>
+
+<div class="features">
+
+<div class="feature">
+<h3>✈️ Easy Booking</h3>
+<p>Book flights, hotels and holiday packages in minutes.</p>
+</div>
+
+<div class="feature">
+<h3>💰 Best Prices</h3>
+<p>Exclusive discounts and affordable travel packages.</p>
+</div>
+
+<div class="feature">
+<h3>🌍 Worldwide Tours</h3>
+<p>Visit over 100 countries with trusted travel partners.</p>
+</div>
+
+<div class="feature">
+<h3>📞 24/7 Support</h3>
+<p>Dedicated travel experts available anytime.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">Featured Holiday Packages</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80">
+<div class="card-content">
+<h3>Bali Escape</h3>
+<p>5 Nights • Flights + Hotel + Breakfast</p>
+<div class="price">₹42,999</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=900&q=80">
+<div class="card-content">
+<h3>Swiss Alps</h3>
+<p>7 Nights • Scenic Tours • Luxury Stay</p>
+<div class="price">₹89,999</div>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=80">
+<div class="card-content">
+<h3>Thailand Tour</h3>
+<p>4 Nights • Beaches • Island Hopping</p>
+<div class="price">₹29,999</div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title">What Our Travelers Say</h2>
+
+<div class="cards">
+
+<div class="review">
+⭐⭐⭐⭐⭐
+<p>"Excellent service! Our Maldives honeymoon was perfectly organized."</p>
+<br>
+<b>- Priya Sharma</b>
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐
+<p>"Amazing customer support and affordable travel packages."</p>
+<br>
+<b>- Rahul Mehta</b>
+</div>
+
+<div class="review">
+⭐⭐⭐⭐⭐
+<p>"Highly recommended! Booking was smooth and hassle-free."</p>
+<br>
+<b>- Neha Patel</b>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>Travel Explorer</h2>
+
+<p>📍 Mumbai, India</p>
+
+<p>📞 +91 98765 43210</p>
+
+<p>✉ info@travelexplorer.com</p>
+
+<br>
+
+<p>© 2026 Travel Explorer. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>
